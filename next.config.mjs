@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    output: 'export', // הוספת השורה הזו
+    reactStrictMode: true,
+    images: {
+      unoptimized: true,
+    },
+  }
+  
+  export default nextConfig
