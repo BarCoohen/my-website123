@@ -1,0 +1,98 @@
+.whyChooseUs {
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    padding: 4rem 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sectionDescription {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #2c2b2b;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 60%;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+    .whyChooseUs {
+        padding: 4rem 1.5rem;
+    }
+    
+    .sectionTitle {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .sectionDescription {
+        width: 85%;
+        font-size: 1.2rem;
+    }
+}
+
+/* טאבלט */
+@media (max-width: 768px) {
+    .whyChooseUs {
+        padding: 3rem 1.5rem;
+    }
+    
+    .sectionTitle {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .sectionDescription {
+        width: 90%;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+/* נייד גדול */
+@media (max-width: 576px) {
+    .whyChooseUs {
+        padding: 2.5rem 1rem;
+    }
+    
+    .sectionTitle {
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .sectionDescription {
+        width: 95%;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+}
+
+/* נייד קטן */
+@media (max-width: 375px) {
+    .whyChooseUs {
+        padding: 2rem 0.8rem;
+    }
+    
+    .sectionTitle {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .sectionDescription {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}

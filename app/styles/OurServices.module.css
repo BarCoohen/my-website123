@@ -1,0 +1,339 @@
+.ourServices {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ourServicesTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding-top: 20px;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+    padding: 20px 0;
+  }
+  
+  .feature {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-width: 20rem;
+    height: 34rem;
+  }
+  
+  .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  .imageWrapper {
+    width: 100%;
+    height: 14rem;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+ 
+  
+  
+  .featureIcon {
+    border-radius: 20px 20px 0 0;
+    
+  }
+
+  
+  .feature h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .feature p {
+    font-size: 1.1rem;
+    padding: 10px;
+    color: #2c2b2b;
+    font-weight: bold;
+    flex-grow: 1;
+  }
+  
+  .featureButton {
+    width: 100%;
+    background-color: rgb(28, 28, 26);
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    border-radius: 0 0 20px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .featureButton::after {
+    content: "\279C";
+    transform: rotate(180deg);
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  .featureButton:hover::after {
+    transform: rotate(180deg) translateX(7px);
+  }
+  
+  .featureButton:hover {
+    background-color: #333;
+  }
+  
+  /* עיצוב קופסאות השירותים */
+  .serviceBoxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin: 1.5rem auto 0;
+  }
+  
+  .serviceBox {
+    width: 10%;
+    min-width: 10rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+  }
+  
+  .serviceBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .serviceIcon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .serviceIcon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .serviceBox h4 {
+    font-size: 1.2rem;
+    color: black;
+    margin: 0;
+  }
+  @media (min-width: 879px) and (max-width: 1140px) {
+    .serviceBox{
+      width: 23%;
+    }
+
+ }
+ 
+
+  @media (max-width: 1024px) {
+    .ourServices {
+      padding: 3.5rem 2rem 2rem;
+    }
+    
+    .ourServicesTitle {
+      font-size: 3rem;
+    }
+    
+    .features {
+      gap: 15px;
+    }
+    
+    .feature {
+      width: 45%;
+      min-width: 20rem;
+    }
+    
+    .serviceBox {
+      min-width: 11rem;
+      padding: 1.2rem;
+    }
+    
+    .serviceIcon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.2rem;
+    }
+  }
+  
+  /* טאבלט */
+  @media (max-width: 768px) {
+    .ourServices {
+      padding: 3rem 1.5rem 1.5rem;
+    }
+    
+    .ourServicesTitle {
+      font-size: 3rem;
+    }
+    
+    .features {
+      gap: 20px;
+    }
+    
+    .feature {
+      width: 100%;
+      min-width: auto;
+      max-width: 550px;
+      height: auto;
+      min-height: 30rem;
+    }
+    
+    .imageWrapper {
+      height: 14rem;
+    }
+    
+    .serviceBoxes {
+      gap: 1.5rem;
+    }
+    
+    .serviceBox {
+      width: 25%;
+      min-width: 10rem;
+      padding: 1rem;
+    }
+    
+    .serviceIcon {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 1rem;
+    }
+    
+    .serviceBox h4 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* נייד גדול */
+  @media (max-width: 576px) {
+    .ourServices {
+      padding: 2rem 1rem 1.5rem;
+    }
+    
+    .ourServicesTitle {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature {
+      max-width: 100%;
+      min-height: auto;
+    }
+    
+    .feature h3 {
+      font-size: 1.3rem;
+    }
+    
+    .feature p {
+      font-size: 1rem;
+    }
+    
+    .featureButton {
+      font-size: 1.1rem;
+      padding: 10px 10px;
+    }
+    
+    .serviceBoxes {
+      gap: 1rem;
+    }
+    
+    .serviceBox {
+      width: 40%;
+      min-width: 8.5rem;
+      padding: 0.8rem;
+    }
+    
+    .serviceIcon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0.8rem;
+    }
+    
+    .serviceBox h4 {
+      font-size: 1rem;
+    }
+  }
+  
+  /* נייד קטן */
+  @media (max-width: 375px) {
+    .ourServices {
+      padding: 1.5rem 0.8rem 1rem;
+    }
+    
+    .ourServicesTitle {
+      font-size: 2.5rem;
+    }
+    
+    .feature {
+      border-radius: 15px;
+    }
+    
+    .imageWrapper {
+      height: 10rem;
+      border-radius: 15px 15px 0 0;
+    }
+    
+    .feature h3 {
+      font-size: 1.2rem;
+    }
+    
+    .feature p {
+      font-size: 0.95rem;
+      padding: 8px;
+    }
+    
+    .featureButton {
+      font-size: 1rem;
+      border-radius: 0 0 15px 15px;
+    }
+    
+    .serviceBoxes {
+      gap: 0.8rem;
+    }
+    
+    .serviceBox {
+      width: 45%;
+      min-width: 7.5rem;
+      padding: 0.7rem;
+      aspect-ratio: 0.9 / 1;
+    }
+    
+    .serviceIcon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.7rem;
+    }
+    
+    .serviceBox h4 {
+      font-size: 0.9rem;
+    }
+  }

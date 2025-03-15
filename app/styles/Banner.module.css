@@ -1,0 +1,162 @@
+/* כותרת ראשית באנר */
+
+.banner {
+    width: 100%;
+    height: 42rem;
+    display: flex;
+    align-items: center;
+    color: #00aaff;
+    text-align: center;
+    background: linear-gradient(to bottom, #a3d5ff 0%, #cfe6f8 0%, #ffffff 100%); 
+    margin: 1rem 0;
+    padding: 20px;
+}
+  .bannerContent {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    color: black;
+  }
+  
+  .banner h1 {
+    font-size: 4rem;
+  }
+  
+  .banner h2 {
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    opacity: 0.8;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* רווח בין הכפתורים */
+    margin-top: 3rem; /* רווח מעל הכפתורים */
+    
+}
+.buttonContainer button{
+    width: 250px;
+    height: 60px;
+    font-size: 1.5rem;
+
+}
+.secondaryButton{
+    background: white;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Varela', Arial, Helvetica, sans-serif;;
+}
+.secondaryButton:hover{
+    background: #007BFF;
+    color: white;
+}
+.animationContainer {
+    width: 50%;
+    height: auto;
+}
+
+/* טאבלט גדול / מחשב קטן */
+@media (max-width: 1024px) {
+  .banner {
+      min-height: 35rem;
+  }
+  
+  .banner h1 {
+      font-size: 3.5rem;
+  }
+  
+  .buttonContainer button {
+      min-width: 200px;
+      height: 55px;
+  }
+}
+
+/* טאבלט */
+@media (max-width: 768px) {
+  .banner {
+      flex-direction: column;
+      min-height: auto;
+      padding: 4rem 2rem;
+      height: 44rem;
+      
+  }
+  
+  .bannerContent {
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+  }
+  
+  .buttonContainer {
+      justify-content: center;
+  }
+  
+  .animationContainer {
+      width: 90%;
+      max-width: 500px;
+  }
+  
+  .banner h1 {
+      font-size: 3rem;
+  }
+
+}
+
+/* נייד גדול */
+@media (max-width: 576px) {
+  .banner {
+      padding: 3rem 1.5rem;
+      margin-top: 2rem;
+      height: 47rem;
+  }
+  
+  .banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+  }
+  
+  .buttonContainer {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+  }
+  
+  .buttonContainer button {
+      width: 100%;
+      max-width: 280px;
+  }
+
+}
+
+/* נייד קטן */
+@media (max-width: 375px) {
+.banner {
+      padding: 2rem 1rem;
+  }
+  
+      
+.banner h1 {
+    font-size: 2.5rem;
+}
+
+.banner h2 {
+    font-size: 1.4rem;
+}
+  
+  .buttonContainer {
+      margin-top: 2rem;
+  }
+  
+  .buttonContainer button {
+      height: 50px;
+ 
+  }
+  
+  .animationContainer {
+      width: 95%;
+  }
+}

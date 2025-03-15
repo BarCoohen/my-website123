@@ -1,0 +1,31 @@
+
+  .navbar {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px); 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;  /* הופך את ה-navbar לקונטיינר גמיש */
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+    height: 3rem;
+  }
+  .navLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .navLinks li {
+    margin: 0 15px;
+  }
+  .navLinks a {
+    text-decoration: none;
+    color: #404344;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  .navLinks a:hover {
+    color: #000000; /* משנה צבע לאפור בעת ריחוף */
+  }
