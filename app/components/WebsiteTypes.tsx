@@ -37,9 +37,8 @@ export default function WebsiteTypes() {
                   <Image
                     src="/images/סוגי אתרים/2004.i518.011_responsive landing page website mobile UI app templates.webp"
                     alt=""
-                    layout="responsive"
-                    width={1200}
-                    height={1097}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                     className={styles.featureImage}
                   />
@@ -84,9 +83,8 @@ export default function WebsiteTypes() {
                   <Image
                     src="/images/סוגי אתרים/4089262_88261.webp"
                     alt="אתר תדמית"
-                    layout="responsive"
-                    width={1200}
-                    height={1283}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className={styles.featureImage}
                   />
                   <div className={styles.backdrop}></div>
@@ -111,7 +109,7 @@ export default function WebsiteTypes() {
                     <ul className={styles.landingPageFeatures}>
                       <li><strong>העלאת וניהול מוצרים בקלות</strong></li>
                       <li><strong>ניהול מלאי בזמן אמת</strong></li>
-                      <li><strong>שילוב אמצעי תשלום מאובטחים</strong></li>
+                      <li><strong>שילוב אמצעי תשלום </strong></li>
                       <li><strong>ניהול הזמנות ומשלוחים</strong></li>
                       <li><strong>דוחות וניתוחים מתקדמים לניהול העסק</strong></li>
                       <li><strong>ניהול לקוחות, מועדוני לקוחות ונאמנות</strong></li>
@@ -119,21 +117,18 @@ export default function WebsiteTypes() {
                       <li><strong>ניהול ביקורות ודירוגי מוצרים</strong></li>
                       <li><strong>תמיכה במספר שפות ומטבעות</strong></li>
                       <li><strong>ניהול החזרות, תלונות ושירות לקוחות</strong></li>
-                      <li><strong>מעקב משלוחים בזמן אמת</strong></li>
                       <li><strong>חיבור לאינטגרציות עם רשתות חברתיות</strong></li>
-                      <li><strong>מערכת המלצות מוצרים ומבצעים מותאמים אישית</strong></li>
                       <li><strong>ועוד המון אפשרויות נוספות</strong></li>
                     </ul>
                   </div>
                 </div>
-                <div id="ecommerce-page" className={styles.featureImageContainer}>
+                <div className={styles.featureImageContainer}>
                   <Image
                     src="/images/סוגי אתרים/iStock-1179101265.webp"
                     alt="חנות אינטרנטית"
-                    layout="responsive"
-                    width={868}
-                    height={1137}
+                    fill
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className={styles.featureImage}
                   />
                   <div className={styles.backdrop}></div>
@@ -176,9 +171,8 @@ export default function WebsiteTypes() {
                   <Image
                     src="/images/סוגי אתרים/iStock-1029914960.webp"
                     alt="אתר מותאם אישית"
-                    layout="responsive"
-                    width={1003}
-                    height={1045}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                     className={styles.featureImage}
                   />

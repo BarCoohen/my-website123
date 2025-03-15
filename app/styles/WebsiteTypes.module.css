@@ -88,17 +88,17 @@
   .featureElementsWrapper {
     display: flex; 
     flex-direction: column;
-    flex: 1;
+    flex: 1.5;
 
   }
 
 .featureImageContainer {
-    height: 31rem;
     position: relative;
     display: flex; 
     border-radius: 24px;
     flex: 1;
   }
+
 .featureImage {
     border-radius: 24px; 
     height: 100% !important; 
@@ -206,6 +206,11 @@
     font-weight: 700;
 }
 
+@media (max-width: 1260px) {
+    .featureElementsWrapper{
+        flex: 1;
+    }
+}
 @media (max-width: 1024px) {
     .featureImageContainer{
         height: auto;

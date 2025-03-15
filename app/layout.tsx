@@ -2,7 +2,7 @@
 import { Rubik, Varela_Round, } from "next/font/google";
 import "./globals.css";
 import Navbar from './components/Navbar';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 // הגדרות הפונטים
 const rubik = Rubik({
@@ -25,8 +25,7 @@ export const metadata: Metadata = {
   description: 'תיאור האתר',
 };
 
-// הוספת viewport - נדרש בגרסאות חדשות של Next.js
-export const viewport = {
+export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 };
@@ -41,7 +40,7 @@ export default function RootLayout({
     <html lang="he" dir="rtl">
       <body className={`${rubik.variable} ${varelaRound.variable}`}>
         <header>
-          <Navbar/>
+           <Navbar/>
         </header>
         
         <main>{children}</main>

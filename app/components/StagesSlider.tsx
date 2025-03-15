@@ -121,6 +121,9 @@
             display: none;
           }
         }
+        @media (max-width: 322px){
+        padding-right: calc(144px - (640px - 100vw) / 3);
+        }
 
       `}</style>
      </div>

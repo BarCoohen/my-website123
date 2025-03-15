@@ -1,0 +1,103 @@
+.technologies {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+.technologiesHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.technologiesHeader h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1c1c1a;
+}
+
+.technologiesHeader p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.techGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 עמודות */
+    grid-template-rows: repeat(3, 1fr); /* 3 שורות */
+    width: 100%;
+    margin: 0 auto; /* מרכוז ה-grid */
+    gap: 1rem;
+    justify-items: center;
+}
+
+.techItem {
+    position: relative;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.techIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.techDesc {
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    padding: 8px 12px;
+    font-size: 1rem;
+    width: 6rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.techItem:hover .techIcon {
+    transform: translateY(-10px);
+}
+
+.techItem:hover .techDesc {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px){
+    .techGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(6, 1fr); 
+
+    }
+
+}
+@media (max-width: 576px){
+    .technologiesHeader h2{
+         font-size: 2.5rem;
+    }
+
+}
+@media (max-width: 375px){
+    .techGrid{
+        gap: 0.5rem;
+    }
+    .techItem{
+        width: 5rem;
+        height: 5rem;
+    }
+    .technologies{
+        padding: 3rem 1rem;
+    }
+}

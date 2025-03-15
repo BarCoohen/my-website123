@@ -3,6 +3,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import OurServices from "./components/OurServices";
 import WebsiteTypes from "./components/WebsiteTypes";
 import Stages from "./components/Stages";
+import Technologies from "./components/Technologies";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <OurServices />
         <WebsiteTypes />
         <Stages />
+        <Technologies />
       </main>
     </>
   );
