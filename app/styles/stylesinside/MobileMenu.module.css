@@ -1,0 +1,225 @@
+.mobileMenuContainer {
+    position: relative;
+    display: none;
+  }
+  
+  /* כפתור ההמבורגר */
+  .mobileMenuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+  }
+  
+  /* אייקון המבורגר משופר */
+  .hamburgerIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    position: relative;
+  }
+  
+  .hamburgerIcon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  
+  /* אנימציה של האייקון למצב X כשהתפריט פתוח */
+  .hamburgerIcon.open span:first-child {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburgerIcon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburgerIcon.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  /* סגנון התפריט הנפתח - עדכון */
+  .mobileNavLinks {
+    position: fixed;
+    top: 3.5rem; /* גובה הנאבבר */
+    right: 0;
+    width: 260px; /* רוחב סביר יותר */
+    max-width: 80vw; /* לא יחרוג מרוחב המסך */
+    height: auto;
+    max-height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    z-index: 100;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobileNavLinks li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* עיצוב הקישורים */
+  .mobileNavLinks a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .mobileNavLinks a:hover,
+  .mobileNavLinks a:focus {
+    color: #00B4FF;
+    background-color: #f5f5f5;
+  }
+  
+  /* סגנונות משופרים לתת-תפריטים */
+  .submenuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  /* סגנון לכותרת התפריט המשני */
+.submenuLabel {
+    padding: 0;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+
+  }
+  
+  .submenuHeader:hover {
+    background-color: #f5f5f5;
+  }
+  
+ 
+  
+  .submenuToggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #333;
+    margin-right: 8rem;
+  }
+  
+  .arrow {
+    font-size: 0.8rem;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .arrowUp {
+    transform: rotate(180deg);
+  }
+  
+  .submenu {
+    list-style: none;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    border-right: 2px solid #00B4FF;
+    margin-right: 1.5rem;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  /* כשתת-התפריט פתוח */
+  .submenuOpen {
+    max-height: 300px; /* גובה מספיק לתת-תפריט */
+  }
+  
+  .submenu li {
+    padding: 0;
+  }
+  
+  .submenu a {
+    padding: 0.6rem 1.5rem 0.6rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  /* מונע הבהוב/רקע כחול בעת לחיצה */
+.submenuHeader,
+.submenuLabel,
+.submenuToggle,
+.arrow {
+  -webkit-tap-highlight-color: transparent; /* למכשירי מובייל */
+  user-select: none; /* מניעת בחירת טקסט */
+  outline: none; /* הסרת מתאר פוקוס */
+}
+
+/* טיפול בפוקוס מקלדת - חשוב לנגישות */
+.submenuHeader:focus-visible,
+.submenuToggle:focus-visible {
+  outline: 2px solid #00B4FF; /* שומר על נגישות מקלדת */
+  outline-offset: 2px;
+}
+
+/* הסרת מתאר פוקוס כברירת מחדל */
+.submenuHeader:focus,
+.submenuToggle:focus {
+  outline: none;
+}
+
+/* וידוא שאין רקע כחול גם בלחיצה */
+.submenuHeader:active,
+.submenuToggle:active {
+  background-color: #f5f5f5; /* רקע אחיד בלחיצה */
+}
+  
+  /* מדיה קוורי מתוקן */
+  @media (max-width: 950px) {
+    .mobileMenuContainer {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+    }
+    
+    /* רקע כהה מאחורי התפריט הפתוח */
+    .menuBackdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 99;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  }

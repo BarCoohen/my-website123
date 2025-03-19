@@ -3,6 +3,7 @@ import { Rubik, Varela_Round, } from "next/font/google";
 import "./globals.css";
 import Navbar from './components/Navbar';
 import type { Metadata, Viewport } from 'next';
+import Footer from "./components/Footer";
 
 // הגדרות הפונטים
 const rubik = Rubik({
@@ -21,13 +22,69 @@ const varelaRound = Varela_Round({
 
 // הוספת metadata - חובה בגרסאות חדשות של Next.js
 export const metadata: Metadata = {
-  title: 'האתר שלי',
-  description: 'תיאור האתר',
+  title: {
+    template: '%s | SitePromotion',
+    default: 'בניית אתרים מקצועית | SitePromotion',
+  },
+  description: 'בניית אתרים , קידום אורגני ועיצוב גרפי לעסקים וארגונים. פתרונות מקצועיים בהתאמה מלאה.',
+  keywords: 'בניית אתרים, קידום אורגני, עיצוב גרפי, SEO, אתרי תדמית, חנות אינטרנטית, דף נחיתה',
+  authors: [{ name: 'SitePromotion' }],
+  creator: 'SitePromotion',
+  publisher: 'SitePromotion',
+
+  metadataBase: new URL('https://sitepromotion.co.il'),
+
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: 'https://sitepromotion.co.il/images/SP-LOGO.webp',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'he_IL',
+    url: 'https://sitepromotion.co.il',
+    siteName: 'SitePromotion',
+    title: 'בניית אתרים מקצועית | SitePromotion',
+    description: 'בניית אתרים , קידום אורגני ועיצוב גרפי לעסקים.',
+    images: [{
+      url: '/images/SP-LOGO.webp',
+      width: 385,
+      height: 96,
+      alt: 'לוגו SitePromotion',
+    }],
+  },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180' },
+    ],
+    shortcut: '/icon.png',
+    
+  },
+  other: {
+    'format-detection': 'telephone=no',
+  },
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  minimumScale: 1,
+  userScalable: true,
+  themeColor: '#0066CC', // החלף בצבע המותג העיקרי שלך
+  viewportFit: 'cover',
 };
 
 // תיקון החתימה של הפונקציה - להשתמש בטיפוס סטנדרטי
@@ -43,11 +100,9 @@ export default function RootLayout({
            <Navbar/>
         </header>
         
-        <main>{children}</main>
-
-        <footer>
-          {/* תוכן הפוטר */}
-        </footer>
+        <main id="main-content">{children}</main>
+        
+        <Footer />
       </body>
     </html>
   );

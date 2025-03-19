@@ -53,19 +53,19 @@
     text-align: center;
 }
 
-.stagesContainer h3 {
+.stagesContainer h3{
     font-size: 1.8rem;
     border-bottom: 2px solid black;
 }
 
-.stagesContainer p {
-    font-size: 1.2rem;
+.content{
+    font-size:1.2rem;
     text-align: right;
+    font-family: var(--font-varela-round), sans-serif;
+
 }
 
-.stages:hover {
-    transform: scale(1.05);
-}
+
 
 @media (max-width: 576px){
     .stagesHeader h2 {

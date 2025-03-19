@@ -29,27 +29,52 @@
     font-size: clamp(1.2rem, 1.5vw, 2rem);
     opacity: 0.8;
   }
-  .buttonContainer {
+
+.buttonContainer {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* רווח בין הכפתורים */
-    margin-top: 3rem; /* רווח מעל הכפתורים */
-    
+    gap: 1rem;
+    margin-top: 3rem;
 }
-.buttonContainer button{
+.buttonContainer button,
+.buttonContainer a {
     width: 250px;
     height: 60px;
     font-size: 1.5rem;
-
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
 }
+
+/* עיצוב לכפתור הראשי */
+.primaryButton {
+    background: #007BFF;
+    color: white;
+    border: 1px solid #007BFF;
+    font-weight: bold;
+    font-family: 'Varela', Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+    background: #0056b3;
+}
+
+/* עיצוב לכפתור המשני */
 .secondaryButton{
     background: white;
     color: #007BFF;
     border: 1px solid #007BFF;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Varela', Arial, Helvetica, sans-serif;;
+    font-family: 'Varela', Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
 }
+
 .secondaryButton:hover{
     background: #007BFF;
     color: white;
@@ -58,6 +83,28 @@
     width: 50%;
     height: auto;
 }
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* שים לב: אתה כבר יש לך .animationContainer 
+     לכן אין צורך להוסיף את זה אלא רק לעדכן על פי הצורך */
+  .animationContainer figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 /* טאבלט גדול / מחשב קטן */
 @media (max-width: 1024px) {
@@ -69,7 +116,8 @@
       font-size: 3.5rem;
   }
   
-  .buttonContainer button {
+  .buttonContainer button,
+  .buttonContainer a {
       min-width: 200px;
       height: 55px;
   }
@@ -125,7 +173,8 @@
       align-items: center;
   }
   
-  .buttonContainer button {
+  .buttonContainer button,
+  .buttonContainer a {
       width: 100%;
       max-width: 280px;
   }
@@ -151,7 +200,8 @@
       margin-top: 2rem;
   }
   
-  .buttonContainer button {
+  .buttonContainer button,
+  .buttonContainer a {
       height: 50px;
  
   }

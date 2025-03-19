@@ -1,0 +1,154 @@
+
+/* Footer Styling */
+.site-footer {
+    background-color: #1c1c1a;
+    color: white;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-column {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+}
+
+.h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00aaff;
+}
+
+/* רשימת צור קשר */
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.contact-list .icon {
+    font-size: 1.2rem;
+}
+
+/* אזור המידע והאייקונים */
+.footer-info {
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    margin: 0 auto;
+
+}
+.social-icon-img{
+    width: 24px;
+    height: 24px;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.contact-link:hover {
+    color: #00aaff;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 1158px){
+    .footer-column{
+        padding: 0 3rem;
+    }
+
+    
+}
+@media (max-width: 966px){
+    .footer-column{
+        padding: 0 1rem;
+    }
+
+    
+}
+@media (max-width: 783px){
+   
+    .footer-column{
+        margin: 0  auto;
+        margin-bottom: 0.5rem;
+    }
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
+
+    
+}
+@media (max-width: 720px){
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-column{
+        width: 80%;
+    }
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:600,800');
+
+.siteLogo {
+  display: flex;
+  font-family: 'Dosis', sans-serif;
+  color: #3F3C3C;
+}
+
+.logo {
+  position: relative;
+  flex: 0 0 60px;
+  width: 60px;
+  z-index: 2;
+}
+
+.siteTitle {
+  position: relative;
+  overflow: hidden;
+  margin-left: -24px;
+  z-index: 1;
+}
+
+.siteTitleText {
+  padding: 4px 6px 4px 28px;
+  color: #3F3C3C;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.highlight {
+  color: #00B4FF;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .siteLogo{
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+@media (max-width: 360px) {
+  .siteTitleText {
+    font-size: 26px;
+  }
+}

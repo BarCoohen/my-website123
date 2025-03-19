@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://sitepromption.co.il/sitemap.xml
+
+# חסימת דפים ספציפיים (אם יש)
+Disallow: /admin/
+Disallow: /private/

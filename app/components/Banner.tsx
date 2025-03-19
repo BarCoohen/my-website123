@@ -1,57 +1,73 @@
-"use client"; // חובה ב-Next.js 13+ כדי להבטיח שזה קובץ צד לקוח
+import Animation from "./client/Animation.client";
+import styles from "../styles/Banner.module.css";
+import SiteNameLogo from "./inside/SiteNameLogo";
+import ContactButton from "./client/ContactButton.client";
 
-import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-import styles from '../styles/Banner.module.css';
-// ייבוא `Lottie` רק בצד הלקוח, כדי למנוע שגיאות
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+export default function Banner() {
+  return (
+    <section 
+      className={styles.banner}
+      aria-labelledby="main-heading"
+      itemScope
+      itemType="https://schema.org/WPHeader"
+    >
+      <div 
+        className={styles.bannerContent}
+        itemScope
+        itemType="https://schema.org/WebSite"
+      >
+        <SiteNameLogo />
+        <h1 
+          id="main-heading"
+          itemProp="headline"
+        >
+          בונים אתרים מעצבים חוויות ויוצרים תוצאות.
+        </h1>
+        <h2 
+          itemProp="description"
+        >
+          פיתוח אתרים מקצועיים, עיצוב שמשאיר רושם וקידום שמביא לקוחות.
+        </h2>
+        <div 
+          className={styles.buttonContainer}
+          role="group"
+          aria-label="אפשרויות יצירת קשר"
+        >
+          <a 
+            href="tel:0585209911" 
+            className={styles.primaryButton}
+            aria-label="התקשר אלינו עכשיו: 058-520-9911"
+            title="לחץ להתקשרות מיידית"
+            itemProp="contactPoint" 
+            itemScope 
+            itemType="https://schema.org/ContactPoint"
+          >
+            <meta itemProp="contactType" content="customer service" />
+            <meta itemProp="availableLanguage" content="Hebrew" />
+            <span itemProp="telephone">058-5209911</span>
+          </a>
+          <ContactButton>צרו קשר</ContactButton>
+        </div>
+        <meta itemProp="url" content="https://www.sitepromotion.co.il" />
+        <meta itemProp="areaServed" content="ישראל" />
+        <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
+          <meta itemProp="name" content="בניית אתרים דף נחיתה מקצועי קידום אתרים אורגני" />
+          <meta itemProp="priceCurrency" content="ILS" />
+          <link itemProp="url" href="https://www.sitepromotion.co.il/services" />
+        </div>
+      </div>
 
-interface AnimationData {
-  v: string;
-  fr: number;
-  ip: number;
-  op: number;
-  w: number;
-  h: number;
-  nm: string;
-  ddd: number;
-  assets: any[];
-  layers: any[];
-  // וכו' - הוסף שדות נוספים לפי הצורך
-}
-
-export default function Banner(){
-    const [animationData, setAnimationData] = useState<AnimationData | null>(null);
-
-    useEffect(() => {
-        async function fetchAnimation() {
-            try {
-                const response = await fetch("https://lottie.host/fc6c6fb7-3dfd-4ced-ad3a-09228e788431/L3mcCI19ZO.json");
-                const data = await response.json();
-                setAnimationData(data);
-            } catch (error) {
-                console.error("Failed to fetch animation:", error);
-            }
-        }
-        fetchAnimation();
-    }, []);
-
-    return (
-        <section className={styles.banner}>
-            <div className={styles.bannerContent}>
-                <h1>בונים אתרים, מעצבים חוויות, ויוצרים תוצאות.</h1>
-                <h2>פיתוח אתרים מקצועיים, עיצוב שמשאיר רושם וקידום שמביא לקוחות.</h2>
-                <div className={styles.buttonContainer}>
-                    <button className={styles.primaryButton}>058-5209911</button>
-                    <button className={styles.secondaryButton}>צרו קשר</button>
-                </div>
-            </div>
-
-            <div className={styles.animationContainer}>
-            {animationData && <Lottie animationData={animationData} loop autoplay />}
-            </div>        
-        </section>
-    );
+      <div 
+        className={styles.animationContainer}
+        role="presentation" 
+        aria-hidden="false"
+      >
+        <div className="animation-wrapper" aria-label="אנימציית בניית אתרים">
+          <Animation />
+        </div>
+      </div>
+    </section>
+  );
 }
 
 

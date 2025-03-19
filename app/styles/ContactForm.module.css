@@ -1,0 +1,102 @@
+.form-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-container-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contactForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-group-row ::placeholder{
+    color: black;
+    font-size: 1.2rem;
+}
+
+.form-group-row input{
+    width: 15rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+
+.form-group button {
+    width: 15rem;
+    height: 3rem;
+    border-radius: 0;
+    font-size: 1.2rem;
+}
+
+
+.form-container h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+/* הפונקציה אחרי שלוחצים שלח ב form */
+.thankYouMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+}
+.thankYouMessage h2{
+    margin-bottom: 0;
+}
+.thankYouMessage p {
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+.thankYouMessage button{
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+
+.errorMessage{
+    color: #d32f2f;
+    font-size: 0.875rem;
+}
+
+
+@media (max-width: 1050px) {
+    .contactForm{
+      flex-direction: column;
+    }
+    
+    .form-group-row {
+        flex-direction: column;
+
+    }
+
+}

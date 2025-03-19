@@ -1,6 +1,6 @@
-// components/Stages.tsx
+import Script from "next/script";
 import styles from "../styles/Stages.module.css";
-import StagesSlider from "./StagesSlider";
+import StagesSlider from "./client/StagesSlider.client";
 
 export default function Stages() {
   // הגדרת התוכן של הסליידים
@@ -31,7 +31,7 @@ export default function Stages() {
           <br />
           • אפיון חוויית משתמש (UX) – לוודא שהגלישה באתר תהיה נוחה ואינטואיטיבית.
           <br />
-          • בחירת פלטפורמה מתאימה (WordPress, קוד מותאם אישית, Shopify וכו&apos;).
+          • בחירת פלטפורמה מתאימה (WordPress, קוד מותאם אישית, Shopify וכו׳).
           <br />
           • סקיצות ראשוניות (Wireframes) שימחישו את המבנה הכללי של האתר.
         </>
@@ -65,7 +65,7 @@ export default function Stages() {
           <br />
           • בניית מערכת ניהול תוכן נוחה שמאפשרת לעדכן את האתר בקלות.
           <br />
-          • פיתוח פיצ&apos;רים מיוחדים לפי דרישה (טפסים, חנות, בלוג, לוח אירועים וכו&apos;).
+          • פיתוח פיצ'רים מיוחדים לפי דרישה (טפסים, חנות, בלוג, לוח אירועים וכו׳).
           <br />
           • אופטימיזציה לזמני טעינה מהירים וביצועים מעולים.
         </>
@@ -126,14 +126,37 @@ export default function Stages() {
     },
   ];
 
+  // אפשרות להוספת JSON-LD לתיאור התוכן (לדוגמה, סוג WebPage)
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "מרעיון למציאות – הדרך לבניית אתר מקצועי",
+    "description": "תיאור התהליך לבניית אתר מקצועי, מהגדרת מטרה ועד השקה ותחזוקה.",
+    "mainContentOfPage": stagesContent.map(stage => ({
+      "@type": "HowToStep",
+      "position": stage.number,
+      "name": stage.title
+    }))
+  };
+
   return (
-    <section className={styles.stagesContainer}>
-      <div className={styles.stagesHeader}>
-        <h2>מרעיון למציאות – הדרך לבניית אתר מקצועי</h2>
-      </div>
-      {/* העבר את מערך הסליידים לרכיב */}
-      <StagesSlider slides={stagesContent} />
-    </section>
+    <>
+      {/* Schema.org למידע מובנה למנועי חיפוש */}
+      <Script id="stages-page-schema" type="application/ld+json">
+        {JSON.stringify(pageSchema)}
+      </Script>
+
+      <section 
+        className={styles.stagesContainer} 
+        role="main" 
+        aria-labelledby="stages-title" 
+      >
+        <div role="banner" className={styles.stagesHeader}>
+          <h2 id="stages-title">מרעיון למציאות – הדרך לבניית אתר מקצועי</h2>
+        </div>
+        <StagesSlider slides={stagesContent} />
+      </section>
+    </>
   );
 }
 
