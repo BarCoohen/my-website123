@@ -73,7 +73,7 @@ export default function Footer() {
         </nav>
 
         {/* עמודה 2 - בלוג */}
-        <div className={styles["footer-column"]} role="region" aria-label="פוסטים מהבלוג">
+        <div className={`${styles["footer-column"]} ${styles["hidden"]}`}  role="region" aria-label="פוסטים מהבלוג">
           <h3 className={styles.h3}>בלוג</h3>
           <ul>
             <li>

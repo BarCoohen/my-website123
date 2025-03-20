@@ -143,7 +143,7 @@ export default function WebsiteTypes() {
                         צרו קשר
                       </a>
                       <Link
-                        href="/web-types/business-site"
+                        href="/web-types/buisness-site"
                         className={styles.buttonLink}
                         aria-label="למידע נוסף על אתר תדמית"
                         role="button"

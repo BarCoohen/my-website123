@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://sitepromption.co.il/sitemap.xml
+Sitemap: https://sitepromotion.co.il/sitemap.xml
 
 # חסימת דפים ספציפיים (אם יש)
 Disallow: /admin/

@@ -20,7 +20,7 @@ export default function Navbar() {
             isCategory: true, // הוספת מאפיין שמציין שזה רק קטגוריה
             children: [
                 { href: "/web-types/landing-page", label: "דף נחיתה" },
-                { href: "/web-types/business-site", label: "אתר תדמית" },
+                { href: "/web-types/buisness-site", label: "אתר תדמית" },
                 { href: "/web-types/ecommerce", label: "חנות אינטרנטית" },
                 { href: "/web-types/custom", label: "אתר מותאם אישית" }
             ]
