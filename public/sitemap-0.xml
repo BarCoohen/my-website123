@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://sitepromotion.co.il/design</loc><lastmod>2025-03-21T11:42:48.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/seo</loc><lastmod>2025-03-21T11:42:48.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/web-types/buisness-site</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/web-types/custom</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/web-development</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/web-types/landing-page</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/about</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://sitepromotion.co.il/web-types/ecommerce</loc><lastmod>2025-03-21T11:42:48.123Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/web-types/custom</loc><lastmod>2025-03-21T19:51:08.247Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/web-development</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/about</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/seo</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/web-types/landing-page</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/design</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/web-types/buisness-site</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il/web-types/ecommerce</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://sitepromotion.co.il</loc><lastmod>2025-03-21T19:51:08.248Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -143,9 +143,9 @@ export default function SEOPage() {
                 </p>
               </li>           
               <li className={styles.featureCard}>
-                <h3 className={styles.featureTitle}>דו"חות וניתוח נתונים</h3>
+                <h3 className={styles.featureTitle}>דו{'"'}חות וניתוח נתונים</h3>
                 <p className={styles.featureDescription}>
-                  הכנת דו"חות מעקב, ניתוח ביצועים והמלצות שוטפות לשיפור הקידום האורגני.
+                  הכנת דו{'"'}חות מעקב, ניתוח ביצועים והמלצות שוטפות לשיפור הקידום האורגני.
                 </p>
               </li>
               <li className={styles.featureCard}>
@@ -195,7 +195,6 @@ export default function SEOPage() {
                 itemProp="mainEntity" 
                 itemType="https://schema.org/Question" 
                 className={styles.faqItem}
-                aria-expanded="false"
               >
                 <summary 
                   itemProp="name" 
@@ -222,7 +221,6 @@ export default function SEOPage() {
                 itemProp="mainEntity" 
                 itemType="https://schema.org/Question" 
                 className={styles.faqItem}
-                aria-expanded="false"
               >
                 <summary 
                   itemProp="name" 
@@ -249,7 +247,7 @@ export default function SEOPage() {
                 itemProp="mainEntity" 
                 itemType="https://schema.org/Question" 
                 className={styles.faqItem}
-                aria-expanded="false"
+               
               >
                 <summary 
                   itemProp="name" 
@@ -276,7 +274,7 @@ export default function SEOPage() {
                 itemProp="mainEntity" 
                 itemType="https://schema.org/Question" 
                 className={styles.faqItem}
-                aria-expanded="false"
+              
               >
                 <summary 
                   itemProp="name" 
@@ -303,7 +301,6 @@ export default function SEOPage() {
                 itemProp="mainEntity" 
                 itemType="https://schema.org/Question" 
                 className={styles.faqItem}
-                aria-expanded="false"
               >
                 <summary 
                   itemProp="name" 
