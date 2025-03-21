@@ -24,10 +24,10 @@ const varelaRound = Varela_Round({
 export const metadata: Metadata = {
   title: {
     template: '%s | SitePromotion',
-    default: 'בניית אתרים מקצועית | SitePromotion',
+    default: 'בניית אתרים  | SitePromotion',
   },
   description: 'בניית אתרים , קידום אורגני ועיצוב גרפי לעסקים וארגונים. פתרונות מקצועיים בהתאמה מלאה.',
-  keywords: 'בניית אתרים, קידום אורגני, עיצוב גרפי, SEO, אתרי תדמית, חנות אינטרנטית, דף נחיתה',
+  keywords: 'בניית אתרים, בניית אתר, בניית אתר לעסקים, קידום אורגני, עיצוב גרפי, SEO, אתרי תדמית, חנות אינטרנטית, דף נחיתה',
   authors: [{ name: 'SitePromotion' }],
   creator: 'SitePromotion',
   publisher: 'SitePromotion',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     locale: 'he_IL',
     url: 'https://sitepromotion.co.il',
     siteName: 'SitePromotion',
-    title: 'בניית אתרים מקצועית | SitePromotion',
+    title: 'בניית אתרים  | SitePromotion',
     description: 'בניית אתרים , קידום אורגני ועיצוב גרפי לעסקים.',
     images: [{
       url: '/images/SP-LOGO.webp',

@@ -1,0 +1,188 @@
+/* app/styles/PageTemplate.module.css */
+.pageContainer {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 1rem;
+  }
+  
+  .pageBanner {
+    width: 100%;
+    min-height: 40rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pageBanner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 15, 38, 0.8);
+    z-index: 1; /* מעל הרקע אך מתחת לתוכן */
+  }
+  
+  .bannerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    color: white;
+  }
+  .contentBlock{
+    margin-bottom: 1.5rem;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .pageSubtitle {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  
+  .pageContent {
+    padding: 0 1.5rem;
+  }
+  
+  /* לסקשנים נפוצים בתוך הדף */
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    border-bottom: 2px solid #5d5a5a;
+    padding-bottom: 0.5rem;
+  }
+  .paragraph{
+    font-size: 1.4rem;
+
+  }
+
+  .featureTitle{
+    font-size: 1.7rem;
+  }
+  .featureDescription{
+    font-size: 1.4rem;
+  }
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .featureGrid{
+    list-style: none;
+  }
+  .ctaButton{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  .faqItem {
+    border-bottom: 1px solid #000000;
+    padding: 10px 0;
+    width: 30rem;
+    display: block;
+    margin: auto;
+  }
+  
+  .faqQuestion {
+    font-family: 'Varela', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faqToggle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  
+  .faqAnswer {
+    font-family: 'Varela', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 10px 0;
+    color: #231d1d;
+  }
+  
+  .faqItem[open] .faqToggle {
+    transform: rotate(45deg);
+  }
+
+
+@media(max-width: 600px){
+    .pageTitle {
+        font-size: 2.5rem;
+        
+      }
+      
+      .pageSubtitle {
+        font-size: 1.4rem;
+      }
+      .sectionTitle {
+        font-size: 2rem;
+      }
+      .paragraph{
+        font-size: 1.2rem;
+    
+      }
+    
+      .featureTitle{
+        font-size: 1.4rem;
+      }
+      .featureDescription{
+        font-size: 1.2rem;
+      }
+}
+@media (max-width: 576px) {
+    .faqQuestion{
+        font-size: 1.1rem;
+    }
+    .faqItem{
+        width: 100%;
+    }
+    .faq{
+        padding: 0 1.5rem;
+    }
+  }
+  @media (max-width: 350px) {
+    .faqQuestion{
+        font-size: 1rem;
+    }
+
+  }
