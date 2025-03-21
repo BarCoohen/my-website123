@@ -111,7 +111,7 @@ export default function Footer() {
             <li>
               <span className={styles.icon} aria-hidden="true">⏰</span> 
               <span>שעות פעילות: </span>
-              <time dateTime="20:00">20:00</time>-<time dateTime="9:00">9:00</time> א'-ה'
+              <time dateTime="20:00">20:00</time>-<time dateTime="9:00">9:00</time> א&apos;-ה&apos;
             </li>
           </ul>
         </address>
