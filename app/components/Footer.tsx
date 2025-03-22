@@ -1,36 +1,15 @@
 import styles from "../styles/Footer.module.css";
 import ContactForm from "./client/ContactForm.client";
 import Link from 'next/link';
-import Script from 'next/script';
+
 
 export default function Footer() {
-  // מידע מובנה לשיפור SEO
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "בניית אתרים קידום באינטרנט ועיצוב גרפי",
-    "url": "https://SitePromotion.co.il",
-    "logo": "https://SitePromotion.co.il/images/SP-LOGO.webp",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "058-5209911",
-      "contactType": "customer service",
-      "areaServed": "IL",
-      "availableLanguage": ["Hebrew", "English"]
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IL"
-    },
 
-  };
+
 
   return (
     <footer className={styles["site-footer"]} role="contentinfo" aria-label="פוטר האתר">
-      {/* הוספת מידע מובנה למנועי חיפוש */}
-      <Script id="organization-schema" type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </Script>
+ 
 
       <ContactForm />
       

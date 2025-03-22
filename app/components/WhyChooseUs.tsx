@@ -74,10 +74,6 @@ export default function WhyChooseUs() {
       <div className={styles.visuallyHidden} aria-hidden="true">
         <meta itemProp="provider" content="SitePromotion" />
         <meta itemProp="areaServed" content="ישראל" />
-        <div itemProp="review" itemScope itemType="https://schema.org/Review">
-          <meta itemProp="reviewRating" content="5" />
-          <meta itemProp="author" content="לקוחות מרוצים" />
-        </div>
         <meta itemProp="audience" content="עסקים גדולים בנונים וקטנים" /> 
       </div>
     </section>

@@ -334,13 +334,7 @@ export default function SEOPage() {
           "name": "קידום אורגני SEO",
           "provider": {
             "@type": "LocalBusiness",
-            "name": "SitePromotion",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "ישראל",
-              "addressRegion": "מרכז"
-            },
-            "telephone": "03-1234567"
+            "@id": "https://SitePromotion.co.il/#organization",
           },
           "description": "שירותי קידום אורגני מקצועיים לאתרי אינטרנט, כולל אופטימיזציה וקידום במנועי חיפוש.",
           "serviceType": "SEO",

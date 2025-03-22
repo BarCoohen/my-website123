@@ -1,6 +1,7 @@
 import styles from '../styles/Navbar.module.css';
 import MobileMenu from './client/MobileMenu.client';
 import Link from 'next/link';
+import Script from 'next/script';
 
 // הגדרת טיפוס לפריט תפריט
 interface MenuItem {
@@ -115,6 +116,23 @@ export default function Navbar() {
                 </a>
             </Link>
         </nav>
+        <Script id="navbar-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "name": menuItems.flatMap(item => 
+                item.children 
+                    ? [item.label, ...item.children.map(child => child.label)] 
+                    : item.label
+                ),
+                "url": menuItems.flatMap(item => 
+                item.children 
+                    ? [`https://www.sitepromotion.co.il${item.href}`, 
+                    ...item.children.map(child => `https://www.sitepromotion.co.il${child.href}`)] 
+                    : `https://www.sitepromotion.co.il${item.href}`
+                )
+            })
+        }} />
       </>
     );
 }

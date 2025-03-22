@@ -22,45 +22,41 @@ export default function PageTemplate({
 }: PageTemplateProps) {
   return (
     <>
-      <div 
+      <article
         className={`${styles.pageContainer} ${className}`}
         itemScope 
         itemType="https://schema.org/WebPage"
-      >
-        {/* באנר עם תמונת רקע וכותרות */}
-        <header 
-          className={styles.pageBanner}
-          style={bannerImage ? { backgroundImage: `url(${bannerImage})` } : {}}
-          role="banner"
-          aria-labelledby="page-title"
-        >
-          {/* הוספת תיאור חלופי לתמונת הרקע עבור קוראי מסך */}
-          {bannerImage && (
-           <span className={styles.srOnly}>
-            {imageAlt}
-           </span>
-          )}
-          
-          <div className={styles.bannerContent}>
-            <SiteNameLogo />
-            <h1 id="page-title" className={styles.pageTitle} itemProp="headline">{title}</h1>
-            {subtitle && (
-              <p 
-                className={styles.pageSubtitle} 
-                itemProp="description"
-                aria-label="תקציר העמוד"
-              >
-                {subtitle}
-              </p>
+      >  
+          <div
+            className={styles.pageBanner}
+            style={bannerImage ? { backgroundImage: `url(${bannerImage})` } : {}}
+            role="banner"
+            aria-labelledby="page-title"
+          >
+            {/* הוספת תיאור חלופי לתמונת הרקע עבור קוראי מסך */}
+            {bannerImage && (
+            <span className={styles.srOnly}>
+                {imageAlt}
+            </span>
             )}
+            
+            <div className={styles.bannerContent}>
+                <SiteNameLogo />
+                <h1 id="page-title" className={styles.pageTitle} itemProp="headline">{title}</h1>
+                {subtitle && (
+                <p 
+                    className={styles.pageSubtitle} 
+                    itemProp="description"
+                    aria-label="תקציר העמוד"
+                >
+                    {subtitle}
+                </p>
+                )}
+            </div>
           </div>
-        </header>
 
-        {/* תוכן הדף */}
-        <main className={styles.pageContent} id="main-content" role="main">
           {children}
-        </main>
-      </div>
+      </article>
     </>
   );
 }

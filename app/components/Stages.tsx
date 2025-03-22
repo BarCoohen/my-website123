@@ -127,23 +127,33 @@ export default function Stages() {
   ];
 
   // אפשרות להוספת JSON-LD לתיאור התוכן (לדוגמה, סוג WebPage)
-  const pageSchema = {
+  const howToSchema = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "HowTo",
     "name": "מרעיון למציאות – הדרך לבניית אתר מקצועי",
-    "description": "תיאור התהליך לבניית אתר מקצועי, מהגדרת מטרה ועד השקה ותחזוקה.",
-    "mainContentOfPage": stagesContent.map(stage => ({
+    "description": "תהליך בניית אתר אינטרנט מקצועי משלב הגדרת המטרות ועד להשקה ותחזוקה",
+    "totalTime": "P7D",
+    "step": stagesContent.map(stage => ({
       "@type": "HowToStep",
       "position": stage.number,
-      "name": stage.title
-    }))
+      "name": stage.title,
+      "itemListElement": {
+        "@type": "HowToDirection",
+        "text": `${stage.title} - שלב ${stage.number} בתהליך בניית אתר מקצועי`
+      }
+    })),
+    "provider": {
+      "@type": "Organization",
+      "name": "SitePromotion",
+      "url": "https://www.sitepromotion.co.il"
+    }
   };
 
   return (
     <>
       {/* Schema.org למידע מובנה למנועי חיפוש */}
-      <Script id="stages-page-schema" type="application/ld+json">
-        {JSON.stringify(pageSchema)}
+      <Script id="stages-schema" type="application/ld+json">
+        {JSON.stringify(howToSchema)}
       </Script>
 
       <section 

@@ -3,20 +3,15 @@
 
 import React, { useState, useRef, ChangeEvent } from "react";
 import styles from "../../styles/ContactForm.module.css";
-import Script from "next/script";
+
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const statusMessageRef = useRef<HTMLDivElement>(null);
 
-  // Schema.org לטופס יצירת קשר
-  const contactFormSchema = {
-    "@context": "https://schema.org",
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "availableLanguage": ["Hebrew", "English"]
-  };
+
+
 
   // טיפול בקלט מספר טלפון והוספת מקף אוטומטי
   const handlePhoneInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -91,9 +86,7 @@ export default function ContactForm() {
       className={styles["form-container"]} 
       aria-labelledby="contact-form-heading"
     >
-      <Script id="contact-schema" type="application/ld+json">
-        {JSON.stringify(contactFormSchema)}
-      </Script>
+
 
       {!submitted ? (
         <div className={styles["form-container-div"]} id="contactFormContainer">

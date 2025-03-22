@@ -9,7 +9,7 @@ export default function Banner() {
       className={styles.banner}
       aria-labelledby="main-heading"
       itemScope
-      itemType="https://schema.org/WPHeader"
+      itemType="https://schema.org/WebPageElement"
     >
       <div 
         className={styles.bannerContent}
@@ -53,7 +53,7 @@ export default function Banner() {
         <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
           <meta itemProp="name" content="בניית אתרים דף נחיתה מקצועי קידום אתרים אורגני" />
           <meta itemProp="priceCurrency" content="ILS" />
-          <link itemProp="url" href="https://www.sitepromotion.co.il/services" />
+          <link itemProp="url" href="https://www.sitepromotion.co.il/" />
         </div>
       </div>
 

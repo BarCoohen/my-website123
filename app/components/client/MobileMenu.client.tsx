@@ -159,30 +159,28 @@ export default function MobileMenu({ menuItems }: MobileMenuProps) {
                       >
                         {item.children.map((subItem, subIndex) => (
                           <li key={subIndex} role="none">
-                            <Link href={subItem.href} passHref legacyBehavior>
-                              <a
-                                role="menuitem"
-                                title={`מידע על ${subItem.label} - סוגים של בניית אתרים`}
-                                aria-current={subItem.current ? "page" : undefined}
-                                ref={index === 0 && subIndex === 0 ? firstItemRef : null}
-                              >
-                                {subItem.label}
-                              </a>
+                            <Link
+                              href={subItem.href}
+                              role="menuitem"
+                              title={`מידע על ${subItem.label} - סוגים של בניית אתרים`}
+                              aria-current={subItem.current ? "page" : undefined}
+                              ref={index === 0 && subIndex === 0 ? firstItemRef : null}
+                            >
+                              {subItem.label}
                             </Link>
                           </li>
                         ))}
                       </ul>
                     </>
                   ) : (
-                    <Link href={item.href} passHref legacyBehavior>
-                      <a
-                        role="menuitem"
-                        title={`מידע על ${item.label} - בניית אתרים מקצועיים`}
-                        aria-current={item.current ? "page" : undefined}
-                        ref={index === 0 ? firstItemRef : null}
-                      >
-                        {item.label}
-                      </a>
+                    <Link
+                      href={item.href}
+                      role="menuitem"
+                      title={`מידע על ${item.label} - בניית אתרים מקצועיים`}
+                      aria-current={item.current ? "page" : undefined}
+                      ref={index === 0 ? firstItemRef : null}
+                    >
+                      {item.label}
                     </Link>
                   )}
                 </li>

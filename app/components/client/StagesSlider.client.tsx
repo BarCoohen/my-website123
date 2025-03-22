@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import styles from "../../styles/Stages.module.css";
 import { useState } from "react";
-import Script from 'next/script';
+
 
 // ייבוא הסגנונות של swiper
 import "swiper/css";
@@ -27,29 +27,9 @@ export default function StagesSlider({ slides, sectionTitle = "שלבי התהל
   // מעקב אחר הסלייד האקטיבי עבור אפקט hover
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   
-  // הגדרת JSON-LD לתהליך עם שלבים (HowTo Schema)
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": sectionTitle,
-    "description": `תהליך ${sectionTitle} בצעדים פשוטים`,
-    "step": slides.map(slide => ({
-      "@type": "HowToStep",
-      "position": slide.number,
-      "name": slide.title,
-      "itemListElement": {
-        "@type": "HowToDirection",
-        "text": typeof slide.content === 'string' ? slide.content : `שלב ${slide.number} בתהליך`
-      }
-    }))
-  };
 
   return (
     <>
-      {/* Schema.org מידע מובנה למנועי חיפוש ללא השפעה על העיצוב */}
-      <Script id="stages-schema" type="application/ld+json">
-        {JSON.stringify(schemaData)}
-      </Script>
       
       {/* אותו מבנה בדיוק כמו המקורי, רק עם תכונות ARIA */}
       <div 

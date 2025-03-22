@@ -7,20 +7,20 @@ import Technologies from "./components/Technologies";
 import FAQ from "./components/FAQ";
 
 
+
+
 export default function Home() {
   return (
     <>
-      <header>
-        <Banner /> {/* בתוך ה-header כי זה חלק מהכותרת הראשית */}
-      </header>
-      <main>
-        <WhyChooseUs />
-        <OurServices />
-        <WebsiteTypes />
-        <Stages />
-        <Technologies />
-        <FAQ />
-      </main>
+      
+      <Banner /> 
+      <WhyChooseUs />
+      <OurServices />
+      <WebsiteTypes />
+      <Stages />
+      <Technologies />
+      <FAQ />
+      
     </>
   );
 }

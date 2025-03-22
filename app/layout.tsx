@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from './components/Navbar';
 import type { Metadata, Viewport } from 'next';
 import Footer from "./components/Footer";
+import Script from 'next/script';
 
 // הגדרות הפונטים
 const rubik = Rubik({
@@ -97,12 +98,45 @@ export default function RootLayout({
     <html lang="he" dir="rtl">
       <body className={`${rubik.variable} ${varelaRound.variable}`}>
         <header>
-           <Navbar/>
+          <Navbar />
         </header>
-        
+
         <main id="main-content">{children}</main>
         
         <Footer />
+        <Script id="organization-schema" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://SitePromotion.co.il/#organization",
+            "name": "SitePromotion",
+            "url": "https://SitePromotion.co.il",
+            "logo": "https://SitePromotion.co.il/images/SP-LOGO.webp",
+            "subOrganization": {
+              "@type": "LocalBusiness",
+              "@id": "https://SitePromotion.co.il/#business",
+              "name": "SitePromotion",
+              "url": "https://SitePromotion.co.il",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IL",
+                "addressRegion": "דרום",
+                "addressLocality": "נחלה", 
+                "postalCode": "7954000",     
+                "streetAddress": "נחלה 47",
+              },
+              "areaServed": "ישראל",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "058-5209911", 
+                "email": "barcohenn123@gmail.com",
+                "contactType": "customer service",
+                "availableLanguage": ["Hebrew"],
+                "hoursAvailable": "Su-Th 09:00-22:00"
+              },
+            },
+          })}
+        </Script>
       </body>
     </html>
   );
