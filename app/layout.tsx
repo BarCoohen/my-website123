@@ -117,6 +117,9 @@ export default function RootLayout({
               "@id": "https://SitePromotion.co.il/#business",
               "name": "SitePromotion",
               "url": "https://SitePromotion.co.il",
+              "telephone": "058-5209911",
+              "priceRange": "₪₪-₪₪₪₪", 
+              "image": "https://SitePromotion.co.il/images/SP-LOGO.webp",
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "IL",
