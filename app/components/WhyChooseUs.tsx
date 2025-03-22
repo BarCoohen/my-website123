@@ -7,24 +7,21 @@ export default function WhyChooseUs() {
     <section 
       className={styles.whyChooseUs}
       aria-labelledby="why-choose-us-title"
-      itemScope
-      itemType="https://schema.org/Service"
     >
       <h2 
         id="why-choose-us-title" 
         className={styles.sectionTitle}
-        itemProp="name"
+
       >
         למה לבחור בנו?
       </h2>
       
       <div 
         className={styles.sectionContent}
-        itemProp="description"
       >
         <p className={styles.introText}>
-          חברתנו היא השותף הדיגיטלי מהמובילים בישראל בתחום <span itemProp="serviceType">בניית אתרים</span>, 
-          <span itemProp="serviceType">עיצוב</span> ו<span itemProp="serviceType">קידום אורגני</span>. 
+          חברתנו היא השותף הדיגיטלי מהמובילים בישראל בתחום <span>בניית אתרים</span>, 
+          <span>עיצוב</span> ו<span >קידום אורגני</span>. 
           עם צוות מקצועי, יצירתי וקשוב, ובעלי ניסיון רב, אנו מחויבים ליצור עבורכם נוכחות אינטרנטית שאין לה תחרות.
         </p>
 
@@ -49,7 +46,7 @@ export default function WhyChooseUs() {
         </ul>
 
         <p className={styles.specializationText}>
-          אנו מתמחים ב<strong itemProp="hasOfferCatalog">פיתוח אתרים ייחודיים</strong> המותאמים לצרכים המדויקים שלכם, 
+          אנו מתמחים ב<strong>פיתוח אתרים ייחודיים</strong> המותאמים לצרכים המדויקים שלכם, 
           עם <strong>עיצובים מודרניים</strong> שמבליטים את זהות המותג 
           ו<strong>קידום אורגני</strong> שמביא תנועה איכותית ולא סתם קליקים רנדומליים.
         </p>
@@ -61,20 +58,11 @@ export default function WhyChooseUs() {
 
         <p className={styles.callToActionText}>
             אז למה אתם מחכים? צרו עמנו קשר עוד היום לתיאום {' '}  
-          <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <span itemProp="name">פגישת ייעוץ ואיפיון ללא התחייבות</span>
-            <meta itemProp="price" content="0" />
-            <meta itemProp="priceCurrency" content="ILS" />
+          <span >
+            <span >פגישת ייעוץ ואיפיון ללא התחייבות</span>
           </span>, 
           ונגלה יחד איך להפוך את הרעיונות שלכם למציאות דיגיטלית מנצחת.
         </p>
-      </div>
-
-      {/* מידע מובנה נוסף - מוסתר ויזואלית */}
-      <div className={styles.visuallyHidden} aria-hidden="true">
-        <meta itemProp="provider" content="SitePromotion" />
-        <meta itemProp="areaServed" content="ישראל" />
-        <meta itemProp="audience" content="עסקים גדולים בנונים וקטנים" /> 
       </div>
     </section>
   );

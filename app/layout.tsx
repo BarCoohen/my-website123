@@ -123,7 +123,7 @@ export default function RootLayout({
                 "addressRegion": "דרום",
                 "addressLocality": "נחלה", 
                 "postalCode": "7954000",     
-                "streetAddress": "נחלה 47",
+                "streetAddress": "נחלה 47"
               },
               "areaServed": "ישראל",
               "contactPoint": {

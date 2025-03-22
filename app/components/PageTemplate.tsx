@@ -24,8 +24,6 @@ export default function PageTemplate({
     <>
       <article
         className={`${styles.pageContainer} ${className}`}
-        itemScope 
-        itemType="https://schema.org/WebPage"
       >  
           <div
             className={styles.pageBanner}
@@ -42,11 +40,10 @@ export default function PageTemplate({
             
             <div className={styles.bannerContent}>
                 <SiteNameLogo />
-                <h1 id="page-title" className={styles.pageTitle} itemProp="headline">{title}</h1>
+                <h1 id="page-title" className={styles.pageTitle} >{title}</h1>
                 {subtitle && (
                 <p 
                     className={styles.pageSubtitle} 
-                    itemProp="description"
                     aria-label="תקציר העמוד"
                 >
                     {subtitle}

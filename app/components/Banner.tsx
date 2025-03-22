@@ -8,23 +8,17 @@ export default function Banner() {
     <section 
       className={styles.banner}
       aria-labelledby="main-heading"
-      itemScope
-      itemType="https://schema.org/WebPageElement"
     >
       <div 
         className={styles.bannerContent}
-        itemScope
-        itemType="https://schema.org/WebSite"
       >
         <SiteNameLogo />
         <h1 
           id="main-heading"
-          itemProp="headline"
         >
           בונים אתרים מעצבים חוויות ויוצרים תוצאות.
         </h1>
         <h2 
-          itemProp="description"
         >
           פיתוח אתרים מקצועיים, עיצוב שמשאיר רושם וקידום שמביא לקוחות.
         </h2>
@@ -38,22 +32,10 @@ export default function Banner() {
             className={styles.primaryButton}
             aria-label="התקשר אלינו עכשיו: 058-520-9911"
             title="לחץ להתקשרות מיידית"
-            itemProp="contactPoint" 
-            itemScope 
-            itemType="https://schema.org/ContactPoint"
           >
-            <meta itemProp="contactType" content="customer service" />
-            <meta itemProp="availableLanguage" content="Hebrew" />
-            <span itemProp="telephone">058-5209911</span>
+            <span>058-5209911</span>
           </a>
           <ContactButton>צרו קשר</ContactButton>
-        </div>
-        <meta itemProp="url" content="https://www.sitepromotion.co.il" />
-        <meta itemProp="areaServed" content="ישראל" />
-        <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-          <meta itemProp="name" content="בניית אתרים דף נחיתה מקצועי קידום אתרים אורגני" />
-          <meta itemProp="priceCurrency" content="ILS" />
-          <link itemProp="url" href="https://www.sitepromotion.co.il/" />
         </div>
       </div>
 

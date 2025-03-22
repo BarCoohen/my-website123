@@ -19,12 +19,11 @@ export default function SEOPage() {
         bannerImage="/images/pagesmig/1690.webp"
         imageAlt="מסך מחשב שנראה עתידני ועליו עובדים על אתר ולידו לוגו של seo"
       >
-        <section className={styles.section} itemScope itemType="https://schema.org/Service">
-          <meta itemProp="serviceType" content="קידום אורגני SEO" />
+        <section className={styles.section} >
           
           <article className={styles.contentBlock}>
-            <h2 id="seo-intro" className={styles.sectionTitle} itemProp="name">מתקדמים למקומות הראשונים בגוגל עם קידום אורגני מקצועי!</h2>
-            <div itemProp="description">
+            <h2 id="seo-intro" className={styles.sectionTitle}>מתקדמים למקומות הראשונים בגוגל עם קידום אורגני מקצועי!</h2>
+            <div>
               <p className={styles.paragraph}>
               כיום, יותר ויותר עסקים מבינים שהצלחה באינטרנט מתחילה לא רק בבניית אתר מרשים, אלא בהפיכתו לנגיש ומוכר ללקוחות הפוטנציאליים. עם <strong>קידום אורגני איכותי</strong>, תוכלו להבטיח שהאתר שלכם יגיע לראש תוצאות החיפוש וימשוך אליו בדיוק את הקהל הנכון. אנחנו עובדים עם אסטרטגיות מוכחות, כלים מתקדמים וצוות מומחים מנוסה כדי לדחוף את האתר שלכם קדימה, למצב את המותג שלכם כמוביל בתחום ולמנף את הנוכחות הדיגיטלית שלכם באופן טבעי וללא תלות בפרסום ממומן.
               </p>
@@ -332,10 +331,6 @@ export default function SEOPage() {
           "@context": "https://schema.org",
           "@type": "Service",
           "name": "קידום אורגני SEO",
-          "provider": {
-            "@type": "LocalBusiness",
-            "@id": "https://SitePromotion.co.il/#organization",
-          },
           "description": "שירותי קידום אורגני מקצועיים לאתרי אינטרנט, כולל אופטימיזציה וקידום במנועי חיפוש.",
           "serviceType": "SEO",
           "category": "קידום אתרים",

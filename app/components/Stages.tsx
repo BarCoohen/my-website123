@@ -142,11 +142,6 @@ export default function Stages() {
         "text": `${stage.title} - שלב ${stage.number} בתהליך בניית אתר מקצועי`
       }
     })),
-    "provider": {
-      "@type": "Organization",
-      "name": "SitePromotion",
-      "url": "https://www.sitepromotion.co.il"
-    }
   };
 
   return (

@@ -58,8 +58,6 @@ export default function LogoComponent() {
   return (
     <div 
       className={styles.siteLogo}
-      itemScope
-      itemType="https://schema.org/Organization"
     >
       <figure id="logo" className={styles.logo} aria-hidden="true">
         <svg 
@@ -90,12 +88,9 @@ export default function LogoComponent() {
         <p 
           id="logo-text" 
           className={styles.siteTitleText}
-          itemProp="name"
         >
           Site<span className={styles.highlight}>Promotion</span>
         </p>
-        <meta itemProp="description" content="בניית אתרים מקצועיים קידום אתרים ועיצוב גרפי" />
-        <meta itemProp="url" content="https://www.SitePromotion.co.il" />
       </div>
     </div>
   );
